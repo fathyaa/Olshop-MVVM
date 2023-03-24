@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="KGk-i7-Jjw" customClass="ProductListTableViewCell" customModule="Olshop_MVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-pD-OUW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jam tangan" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUQ-uR-gqw">
+                                <rect key="frame" x="120" y="10" width="130" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vor-T8-xng">
+                                <rect key="frame" x="5" y="5" width="105" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="3Ry-hq-jEB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp100.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9w8-dK-xXM">
+                                <rect key="frame" x="120" y="32" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqY-6c-g7l">
+                                <rect key="frame" x="274" y="79" width="46" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=""/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OV-yR-6Rq">
+                                <rect key="frame" x="281" y="10" width="29" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 ulasan " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHI-zb-8Bh">
+                                <rect key="frame" x="253" y="26" width="57" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9w8-dK-xXM" firstAttribute="leading" secondItem="yUQ-uR-gqw" secondAttribute="leading" id="5f5-7q-P8v"/>
+                            <constraint firstItem="vor-T8-xng" firstAttribute="leading" secondItem="Ger-pD-OUW" secondAttribute="leading" constant="5" id="5t5-cq-utg"/>
+                            <constraint firstItem="9w8-dK-xXM" firstAttribute="top" secondItem="yUQ-uR-gqw" secondAttribute="bottom" constant="5" id="EJe-uD-cwS"/>
+                            <constraint firstAttribute="trailing" secondItem="6OV-yR-6Rq" secondAttribute="trailing" constant="10" id="EPc-ay-vx7"/>
+                            <constraint firstItem="yUQ-uR-gqw" firstAttribute="leading" secondItem="vor-T8-xng" secondAttribute="trailing" constant="10" id="EVO-ID-3q1"/>
+                            <constraint firstAttribute="bottom" secondItem="vor-T8-xng" secondAttribute="bottom" constant="5" id="Fpe-0K-6tB"/>
+                            <constraint firstAttribute="trailing" secondItem="FqY-6c-g7l" secondAttribute="trailing" id="GNt-Ax-Q3y"/>
+                            <constraint firstItem="YHI-zb-8Bh" firstAttribute="top" secondItem="6OV-yR-6Rq" secondAttribute="bottom" constant="1.5" id="IeX-2S-XHn"/>
+                            <constraint firstItem="yUQ-uR-gqw" firstAttribute="top" secondItem="Ger-pD-OUW" secondAttribute="top" constant="10" id="Rjh-GI-v0m"/>
+                            <constraint firstAttribute="height" constant="120" id="a3S-rn-IiL"/>
+                            <constraint firstItem="6OV-yR-6Rq" firstAttribute="top" secondItem="Ger-pD-OUW" secondAttribute="top" constant="10" id="cM5-iS-pkQ"/>
+                            <constraint firstAttribute="bottom" secondItem="FqY-6c-g7l" secondAttribute="bottom" constant="10" id="etn-ut-h0u"/>
+                            <constraint firstItem="vor-T8-xng" firstAttribute="top" secondItem="Ger-pD-OUW" secondAttribute="top" constant="5" id="kKw-hs-6jx"/>
+                            <constraint firstAttribute="trailing" secondItem="yUQ-uR-gqw" secondAttribute="trailing" constant="70" id="nEB-ZX-okC"/>
+                            <constraint firstItem="6OV-yR-6Rq" firstAttribute="trailing" secondItem="YHI-zb-8Bh" secondAttribute="trailing" id="tnI-ve-Xwp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Ger-pD-OUW" secondAttribute="bottom" id="3Wg-zS-r2x"/>
+                    <constraint firstItem="Ger-pD-OUW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UNm-C5-3xY"/>
+                    <constraint firstItem="Ger-pD-OUW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hgd-2K-RbN"/>
+                    <constraint firstAttribute="trailing" secondItem="Ger-pD-OUW" secondAttribute="trailing" id="scy-xB-plK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countRatingLabel" destination="YHI-zb-8Bh" id="AiI-Xu-EMG"/>
+                <outlet property="likeButton" destination="FqY-6c-g7l" id="ayW-ie-Z9E"/>
+                <outlet property="productImage" destination="vor-T8-xng" id="hTY-Hg-Sd3"/>
+                <outlet property="productNameLabel" destination="yUQ-uR-gqw" id="ZPG-XJ-dJm"/>
+                <outlet property="productPriceLabel" destination="9w8-dK-xXM" id="nqf-qj-odU"/>
+                <outlet property="ratingLabel" destination="6OV-yR-6Rq" id="8xp-kG-SFL"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="117.52232142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
