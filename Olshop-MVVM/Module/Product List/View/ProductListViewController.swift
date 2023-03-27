@@ -14,17 +14,26 @@ class ProductListViewController: UIViewController {
     var listViewModel: ProductLisViewModel?
     var modelProducts: [Products]?
     
+    let storeImage : UIImageView = {
+        let si = UIImageView()
+        si.image = UIImage(named: "store")
+        si.translatesAutoresizingMaskIntoConstraints = false
+        return si
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Product List"
+        view.backgroundColor = UIColor(named: "nav")
         setupProductListTableView()
         bindAPIData()
+        setupNavigation()
     }
     
     func setupProductListTableView(){
         listTableView.delegate = self
         listTableView.dataSource = self
         listTableView.register(UINib(nibName: "ProductListTableViewCell", bundle: nil), forCellReuseIdentifier: ProductListTableViewCell.identifier)
+        listTableView.separatorStyle = .none
     }
     
     func bindAPIData(){
@@ -41,6 +50,16 @@ class ProductListViewController: UIViewController {
             }
         }
     }
+    
+    func setupNavigation(){
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "nav")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: storeImage)
+        
+        NSLayoutConstraint.activate([
+            storeImage.heightAnchor.constraint(equalToConstant: 60),
+            storeImage.widthAnchor.constraint(equalToConstant: 120)
+        ])
+    }
 }
         
 extension ProductListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -51,20 +70,19 @@ extension ProductListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = listTableView.dequeueReusableCell(withIdentifier: ProductListTableViewCell.identifier, for: indexPath) as? ProductListTableViewCell else { return UITableViewCell()}
         if let products = modelProducts?[indexPath.row] {
-            cell.productNameLabel.text = products.title
-            cell.productPriceLabel.text = "$\(products.price)"
-            cell.ratingLabel.text = "\(products.rating.rate)/5"
-            cell.countRatingLabel.text = "\(products.rating.count) ulasan"
-            cell.productImage.sd_setImage(with: URL(string: products.image))
+            cell.setData(products: products)
         }
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyboard.instantiateViewController(withIdentifier: "detailVC") as! ProductDetailViewController
-        detailVC.dataProduct = modelProducts
+        if let product = modelProducts?[indexPath.row] {
+            detailVC.dataProduct = product
+        }
         navigationController?.pushViewController(detailVC, animated: true)
     }
-    
+
 }
