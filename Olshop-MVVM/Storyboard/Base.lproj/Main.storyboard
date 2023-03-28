@@ -11,7 +11,7 @@
         <!--Product List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ProductListViewController" customModule="Olshop_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="productListVC" id="BYZ-38-t0r" customClass="ProductListViewController" customModule="Olshop_MVVM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +72,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tu-Lg-qPe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1668" y="75"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="fPL-rg-Jo7">
+            <objects>
+                <viewController storyboardIdentifier="profileVC" id="Uuq-9j-YGf" customClass="ProfileViewController" customModule="Olshop_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ed0-9L-uak">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YbB-9K-lq2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uXr-mR-2eu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uXr-mR-2eu" firstAttribute="trailing" secondItem="YbB-9K-lq2" secondAttribute="trailing" id="5Fb-ng-r0J"/>
+                            <constraint firstItem="uXr-mR-2eu" firstAttribute="bottom" secondItem="YbB-9K-lq2" secondAttribute="bottom" id="Mev-vE-e8m"/>
+                            <constraint firstItem="YbB-9K-lq2" firstAttribute="top" secondItem="uXr-mR-2eu" secondAttribute="top" id="czv-OD-jEa"/>
+                            <constraint firstItem="YbB-9K-lq2" firstAttribute="leading" secondItem="uXr-mR-2eu" secondAttribute="leading" id="vEr-Fj-oIb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profileTableView" destination="YbB-9K-lq2" id="nrm-CZ-ihG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAk-qT-IZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2457" y="82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cp5-W0-vjP">

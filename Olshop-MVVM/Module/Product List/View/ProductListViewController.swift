@@ -14,11 +14,19 @@ class ProductListViewController: UIViewController {
     var listViewModel: ProductLisViewModel?
     var modelProducts: [Products]?
     
-    let storeImage : UIImageView = {
+    let storeImage: UIImageView = {
         let si = UIImageView()
         si.image = UIImage(named: "store")
         si.translatesAutoresizingMaskIntoConstraints = false
         return si
+    }()
+    
+    let messageButton: UIImageView = {
+        let mb = UIImageView()
+        mb.image = UIImage(systemName: "envelope.fill")
+        mb.translatesAutoresizingMaskIntoConstraints = false
+        mb.tintColor = .black
+        return mb
     }()
     
     override func viewDidLoad() {
@@ -54,6 +62,7 @@ class ProductListViewController: UIViewController {
     func setupNavigation(){
         self.navigationController?.navigationBar.backgroundColor = UIColor(named: "nav")
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: storeImage)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: messageButton)
         
         NSLayoutConstraint.activate([
             storeImage.heightAnchor.constraint(equalToConstant: 60),
